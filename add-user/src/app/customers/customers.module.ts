@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { StoreModule } from '@ngrx/store';
+import { customerReducer } from './state/customer.reducer';
+
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
@@ -21,7 +25,8 @@ const customerRoutes: Routes = [{
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(customerRoutes)
+    RouterModule.forChild(customerRoutes),
+    StoreModule.forFeature('customers', customerReducer)
   ]
 })
 export class CustomersModule { }

@@ -12,4 +12,7 @@ export class CustomerEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateCustomer(){
+    
+  }
 }
