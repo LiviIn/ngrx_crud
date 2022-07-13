@@ -19,6 +19,7 @@ export class CustomerListComponent implements OnInit {
     this.store.dispatch({ type: "LOAD_CUSTOMERS"});
     this.store.subscribe(state => {
       this.customers = state.customers.customers
+      console.log(this.customers)
     })
   }
 

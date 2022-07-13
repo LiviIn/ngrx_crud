@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-customer-add',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-add.component.css']
 })
 export class CustomerAddComponent implements OnInit {
+  customerForm!: FormGroup;
   
   constructor() { }
 

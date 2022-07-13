@@ -10,6 +10,7 @@ import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const customerRoutes: Routes = [{
   path: "",
@@ -25,6 +26,8 @@ const customerRoutes: Routes = [{
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(customerRoutes),
     StoreModule.forFeature('customers', customerReducer)
   ]
